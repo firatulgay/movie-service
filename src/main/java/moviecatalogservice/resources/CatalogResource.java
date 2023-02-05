@@ -31,6 +31,7 @@ public class CatalogResource {
         if (userRating != null){
             System.out.println("testt");
         }
+        System.out.println("abc123 test");
 
         return userRating.getRatings().stream()
                 .map(rating -> {
