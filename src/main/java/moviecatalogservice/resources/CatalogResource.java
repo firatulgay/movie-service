@@ -28,6 +28,9 @@ public class CatalogResource {
     public List<CatalogItem> getCatalog(@PathVariable("userId") String userId) {
 
         UserRating userRating = restTemplate.getForObject("http://ratings-data-service/ratingsdata/user/" + userId, UserRating.class);
+        if (userRating != null){
+            System.out.println("testt");
+        }
 
         return userRating.getRatings().stream()
                 .map(rating -> {
